@@ -2,9 +2,9 @@
   <name>phantom_omni</name>
   <version>1.0.0</version>
   <description>
-     ROS Node for Sensable Phantom Omni devices.
+     ROS Node for Sensable Phantom Omni devices (Simulation).
   </description>
-  <maintainer email="git@danepowell.com">Dane Powell</maintainer>
+  <maintainer email="git@danepowell.com">Ishida Kanako</maintainer>
   <author>Hai Nguyen, Marc Killpack, Chi-Hung King, Advisor: Prof. Charlie Kemp, Lab: Healthcare Robotics Lab at Georgia Tech</author>
   <license>new BSD</license>
 
@@ -16,7 +16,6 @@
   <build_depend>genmsg</build_depend>
   <build_depend>rospy</build_depend>
   <build_depend>tf</build_depend>
-  <build_depend>openhaptics-ae</build_depend>
   <build_depend>rosconsole</build_depend>
   <build_depend>urdf</build_depend>
   <build_depend>sensor_msgs</build_depend>

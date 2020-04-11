@@ -3,7 +3,7 @@ project(phantom_omni)
 
 find_package(catkin REQUIRED COMPONENTS roscpp std_msgs geometry_msgs genmsg rosconsole tf urdf)
 
-add_message_files(FILES PhantomButtonEvent.msg OmniFeedback.msg EndEffPosition.msg)
+add_message_files(FILES PhantomButtonEvent.msg OmniFeedback.msg)
 
 generate_messages(DEPENDENCIES geometry_msgs)
 
@@ -11,9 +11,8 @@ catkin_package(CATKIN_DEPENDS roscpp std_msgs geometry_msgs genmsg rosconsole tf
 
 include_directories(${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS})
 
-add_executable(omni src/omni.cpp)
+add_executable(omni_sim src/omni.cpp)
 
-target_link_libraries(omni HD HDU rt ncurses ${catkin_LIBRARIES})
+target_link_libraries(omni_sim rt ncurses ${catkin_LIBRARIES})
 
-add_dependencies(omni phantom_omni_generate_messages_cpp)
 

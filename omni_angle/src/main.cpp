@@ -1,7 +1,7 @@
 #include <ros/ros.h>
 #include <math.h>
 #include <signal.h>
-#include <sim_phantom_omni/OmniFeedback.h>
+#include <phantom_omni/OmniFeedback.h>
 #include <sensor_msgs/JointState.h>
 #include <geometry_msgs/Vector3.h>
 
