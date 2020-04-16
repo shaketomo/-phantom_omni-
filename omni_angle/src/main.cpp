@@ -7,6 +7,8 @@
 
 using namespace std;
 
+#define MAX_TORQUE 500.0
+
 bool interrupted = false;
 
 void mySigintHandler(int sig)
@@ -177,7 +179,7 @@ int main(int argc, char *argv)
     	pub.publish(msg);
     	ros::shutdown();		
 	}
-	
+
   pub_.publish(msg);
    
   prevTimeLoop = t;
