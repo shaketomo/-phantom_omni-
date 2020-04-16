@@ -7,6 +7,8 @@
 
 using namespace std;
 
+#define MAX_TORQUE 500.0
+
 bool interrupted = false;
 
 void mySigintHandler(int sig)
@@ -168,6 +170,16 @@ int main(int argc, char *argv)
 		cout<<"Hello World"<<endl;
 	break;
   }  
+
+  	if(fabs(msg.torque.x) > MAX_TORQUE || fabs(msg.torque.y) > MAX_TORQUE || fabs(msg.torque.z) > MAX_TORQUE ){
+		ROS_ERROR_STREAM("TORQUE OVERFLOW");
+    	msg.torque.x = 0;
+    	msg.torque.y = 0;
+    	msg.torque.z = 0;
+    	pub.publish(msg);
+    	ros::shutdown();		
+	}
+
   pub_.publish(msg);
    
   prevTimeLoop = t;
