@@ -15,4 +15,4 @@ add_executable(omni_sim src/omni.cpp)
 
 target_link_libraries(omni_sim rt ncurses ${catkin_LIBRARIES})
 
-
+add_dependencies(omni_sim phantom_omni_generate_messages_cpp)
